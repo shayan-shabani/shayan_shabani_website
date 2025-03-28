@@ -1,33 +1,11 @@
+// ThemeToggle.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useTheme } from './ThemeProvider';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
+  const { theme, toggleTheme } = useTheme();
+  
   return (
     <button
       onClick={toggleTheme}
@@ -37,6 +15,7 @@ export default function ThemeToggle() {
       aria-label="Toggle Theme"
     >
       {theme === 'light' ? (
+        // Sun icon
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -52,6 +31,7 @@ export default function ThemeToggle() {
           />
         </svg>
       ) : (
+        // Fixed moon icon
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -63,7 +43,7 @@ export default function ThemeToggle() {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M21.752 15.002A9.718 9.718 0 0112.002 21a9.718 9.718 0 01-9.75-5.998M12 3v18m9.752-6.998H2.252"
+            d="M21.752 15.002A9.718 9.718 0 0 1 12.002 21a9.742 9.742 0 0 1-8.776-5.595c-.21-.479.154-.91.638-1.029a9.76 9.76 0 0 0 7.967-1.917c2.97-2.392 3.913-5.397 3.506-8.547-.096-.735.499-1.071 1.044-.79A9.725 9.725 0 0 1 21.752 15.002Z"
           />
         </svg>
       )}
