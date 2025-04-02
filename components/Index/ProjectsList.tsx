@@ -8,7 +8,7 @@ export const ProjectsList = () => (
 		link="https://github.com/shayan-shabani/DiffTaichi-Jumping-Robot"
 		tags={['Python', 'DiffTaichi', 'Simulation']}
 		>
-			Differentiable physics simulator built with DiffTaichi that generates a jumping robot 
+			DiffTaichi physics simulator that generates a jumping robot 
 			with gradient-optimized spring stiffness parameters and sinusoidal open-loop control for stable motion.
 		</Card>
 		<Card

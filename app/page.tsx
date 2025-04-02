@@ -7,7 +7,6 @@ import { ProjectsList } from 'components/Index/ProjectsList';
 import ThemeToggle from 'ThemeToggle.tsx';
 import {
 	containerClasses,
-	fancyLinkClasses,
 	linkClasses,
 	sectionBodyClasses
 } from 'components/styles';
@@ -19,7 +18,6 @@ export default function Home() {
 				<div className="min-h-screen flex flex-col justify-center relative">
 					<div className={`${containerClasses} z-10`}>
 						<div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-						{/* SVG background remains unchanged */}
 						</div>
 						<SectionTitle big accentText="Hi there! I'm">
 							<ReactTyped
@@ -90,11 +88,11 @@ export default function Home() {
 				</div>
 			</div>
 			<div className={containerClasses} id="projects">
-					<SectionTitle big accentText="04">
+					<SectionTitle big accentText="03">
 						Projects
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
-						<p>Always building new things.</p>
+						<p>Always looking for exciting things to work on!</p>
 					</div>
 					<div className="h-8 lg:h-12"></div>
 					<ProjectsList />
