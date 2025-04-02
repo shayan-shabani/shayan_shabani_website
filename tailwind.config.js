@@ -18,15 +18,15 @@ module.exports = {
       },
       colors: {
         homepageIcon: '#225da5',
-        accent: colors.fuchsia['400'],
-        darkBackground: '#020617', // Dark background
-        lightBackground: '#ffffff', // True white for light mode
-        darkText: '#ffffff', // White text for dark mode
-        lightText: '#000000', // Black text for light mode
+        accent: colors.amber['500'],
+        darkBackground: '#020617',
+        lightBackground: '#ffffff',
+        darkText: '#ffffff',
+        lightText: '#000000',
       },
       boxShadow: {
-        glow: '0 0 15px rgba(255, 255, 0, 0.8)', // Glow effect for light mode
-        darkGlow: '0 0 15px rgba(0, 0, 255, 0.8)', // Glow effect for dark mode
+        glow: '0 0 15px rgba(255, 255, 0, 0.8)',
+        darkGlow: '0 0 15px rgba(0, 0, 255, 0.8)',
       },
     },
   },

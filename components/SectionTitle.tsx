@@ -9,15 +9,12 @@ export const SectionTitle = ({
 	children: React.ReactNode;
 	big?: boolean;
 }) => {
-	const shouldShowPeriod = big && typeof children === 'string' && !children.trim().endsWith('.');
-	
 	return (
 		<>
 			{accentText && <span className="text-xl xl:text-2xl text-accent font-mono">{accentText}</span>}
 			<div className="lg:h-4"></div>
 			<h1 className={big ? sectionTitleBigClasses : sectionTitleClasses}>
 				{children}
-				{shouldShowPeriod && <span className="text-accent">.</span>}
 			</h1>
 			<div className="h-6 md:h-8 lg:h-12 xl:h-16"></div>
 		</>

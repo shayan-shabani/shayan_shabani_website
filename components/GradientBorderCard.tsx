@@ -1,46 +1,62 @@
-import { CSSProperties, useContext } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { useTheme } from 'ThemeProvider.tsx';
 
-export default function GradientBorderCard({ children, className = 'p-8' }) {
-    const { theme } = useTheme(); // Get the current theme
+type GradientBorderCardProps = {
+  children: ReactNode;
+  className?: string;
+  isLink?: boolean;
+  heightFull?: boolean;
+};
 
-    // Define theme-specific colors
-    const themeColors = {
-        light: {
-            slate950: '245 245 245',
-            accent: '255 126 234',
-            blue: '56 189 248',
-        },
-        dark: {
-            slate950: '2 6 23',
-            accent: '232 121 249',
-            blue: '29 78 216',
-        },
-    };
+export default function GradientBorderCard({ 
+  children, 
+  className = 'p-4 sm:p-6', 
+  isLink = false,
+  heightFull = true
+}: GradientBorderCardProps) {
+  const { theme } = useTheme();
 
-    // Select colors based on the current theme
-    const colors = themeColors[theme];
+  // Define theme-specific colors
+  const themeColors = {
+    light: {
+      bg: '255 255 255',
+      text: '15 23 42',
+      gold: '234 179 8',
+      purple: '168 85 247'
+    },
+    dark: {
+      bg: '2 6 23',
+      text: '255 255 255',
+      gold: '250 204 21',
+      purple: '192 132 252'
+    },
+  };
 
-    return (
-        <div
-            style={
-                {
-                    '--slate-950': colors.slate950,
-                    '--accent': colors.accent,
-                    '--blue': colors.blue,
-                    '--bg-color': 'linear-gradient(rgb(var(--slate-950)), rgb(var(--slate-950)))',
-                    '--border-color': `linear-gradient(var(--angle),
-                      rgb(var(--accent) / 0.8) 0%,
-                      rgb(var(--accent) / 0.3) 33.33%,
-                      rgb(var(--accent) / 0.14) 66.67%,
-                      rgb(var(--blue) / 0.5) 100%)
-                    `,
-                } as CSSProperties
-            }
-            className={`w-full border ${className} [--angle:145deg]
-            [border-image:var(--border-color)_1]`}
-        >
-            {children}
-        </div>
-    );
+  const colors = themeColors[theme] || themeColors.dark;
+
+  return (
+    <div
+      style={{
+        '--bg': colors.bg,
+        '--text': colors.text,
+        '--gold': colors.gold,
+        '--purple': colors.purple,
+        '--bg-color': `rgb(var(--bg))`,
+        '--border-color': `linear-gradient(var(--angle),
+          rgb(var(--gold)) 0%,
+          rgb(var(--gold) / 0.7) 33.33%,
+          rgb(var(--purple) / 0.6) 66.67%,
+          rgb(var(--purple) / 0.8) 100%)
+        `,
+      } as CSSProperties}
+      className={`w-full ${heightFull ? 'h-full' : ''} bg-white dark:bg-slate-900 flex flex-col ${className} 
+        [--angle:145deg] border border-transparent
+        [background-origin:border-box] 
+        [background-clip:padding-box,border-box]
+        [background-image:var(--bg-color),var(--border-color)]
+        transition-colors duration-300 shadow-md`}
+    >
+      {children}
+    </div>
+  );
 }

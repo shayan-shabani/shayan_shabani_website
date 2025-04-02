@@ -4,57 +4,58 @@ import { CardGrid } from 'components/CardGrid/CardGrid';
 export const ProjectsList = () => (
 	<CardGrid>
 		<Card
-			title="USACO Guide"
-			link="https://github.com/cpinitiative/usaco-guide/"
-			tags={['Gatsby', 'React', 'Tailwind', 'Firebase']}
+		title="Differentiable Simulator"
+		link="https://github.com/shayan-shabani/DiffTaichi-Jumping-Robot"
+		tags={['Python', 'DiffTaichi', 'Simulation']}
 		>
-			The USACO Guide is a free collection of curated, high-quality competitive programming
-			resources aimed to bring contestants from Bronze to Platinum and beyond.
+			Differentiable physics simulator built with DiffTaichi that generates a jumping robot 
+			with gradient-optimized spring stiffness parameters and sinusoidal open-loop control for stable motion.
 		</Card>
 		<Card
-			title="Competitive Programming Initiative"
-			link="https://joincpi.org/"
+			title="Database Management System"
+			tags={['C++']}
+		>
+			Thread-safe DBMS featuring an LRU‑K buffer pool manager, a B+ tree index with latch 
+			crabbing for concurrent access, and optimized query execution through hash joins and Top‑N operators.
+		</Card>
+		<Card
+			title="Spark Teen"
+			link="https://www.sparkteen.org/"
 			tags={['Volunteering']}
 		>
-			I'm the founder of the Competitive Programming Initiative, a student-run nonprofit
-			organization dedicated to promoting competitive programming amongst students.
+			Built one of the world's largest entrepreneurship education nonprofits. 
+			Backed by We Are Family Foundation, Techstars, the City of Portland, and REAP.
 		</Card>
 		<Card
-			title="Competitive Programming Solutions"
-			link="https://github.com/thecodingwizard/competitive-programming/"
-			tags={['Competitive Programming']}
+			title="TEDx Talk - Creating Inclusive Communities for Refugees"
+			link="https://www.youtube.com/watch?v=hZuc_vgFh-g"
+			tags={['Public Speaking']}
 		>
-			This Github repository contains solutions to some of the 900+ competitive programming problems
-			I've solved!
+			Presented before 300+ people at Walters Arts Center and published 
+			on TEDx YouTube channel with 42M+ subscribers
 		</Card>
 		<Card
-			title="Realtime IDE"
-			link="https://github.com/cpinitiative/ide"
-			tags={['React', 'Firebase', 'CRDT']}
+			title="Transfer Learning Image Classifier"
+			link="https://github.com/shayan-shabani/BasicImageClassifier"
+			tags={['Python', 'PyTorch', 'Computer Vision']}
 		>
-			A realtime collaborative IDE with code execution and input/output, designed for competitive
-			programming and USACO.
+			ResNet-18 transfer learning pipeline with feature extraction, fine-tuning capabilities, 
+			and integrated data augmentation for multi-class image classification.
 		</Card>
 		<Card
-			title="Serverless Online Judge"
-			link="https://github.com/cpinitiative/online-judge-rust"
-			tags={['AWS Lambda', 'Rust']}
-		>
-			A serverless code execution system built with AWS Lambda and Rust that supports C++, Java, and
-			Python.
+			title="Unbeatable Tic-Tac-Toe AI"
+			link="https://github.com/shayan-shabani/ImpossibleTicTacToe"
+			tags={['Python', 'Pygame']}
+			>
+			Minimax implementation with alpha-beta pruning that creates an optimal 
+			Tic-Tac-Toe opponent using recursive game tree traversal and state evaluation.
 		</Card>
 		<Card
 			title="Personal Website"
-			link="https://github.com/thecodingwizard/personal-website"
+			link="https://github.com/shayan-shabani/shayan_shabani_website"
 			tags={['React', 'Next.js', 'Tailwind']}
 		>
-			This site! Built with React, Next.js, and Tailwind CSS.
-		</Card>
-		<Card title="AP Physics C Practice" link="https://apc-practice.vercel.app/" tags={['Svelte']}>
-			AP Physics C Mechanics & E&M practice questions, scraped from CollegeBoard.
-		</Card>
-		<Card title="Party Games" link="/games" tags={['Miscellaneous']}>
-			A collection of my favorite party games.
+			Everything you're seeing!
 		</Card>
 	</CardGrid>
 );

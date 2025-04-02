@@ -13,18 +13,16 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Default Light Mode */
 :root {
-  --slate-950: 255, 255, 255; /* Pure white */
-  --text-color: 0, 0, 0;      /* Black text */
-  --accent: 102, 126, 234;    /* Light accent */
+  --slate-950: 255, 255, 255;
+  --text-color: 0, 0, 0;
+  --accent: 245, 158, 11;
 }
 
-/* Dark Mode Overrides */
 :root.dark {
-  --slate-950: 2, 6, 23;       /* Dark navy background */
-  --text-color: 255, 255, 255; /* White text */
-  --accent: 232, 121, 249;     /* Bright accent */
+  --slate-950: 2, 6, 23;
+  --text-color: 255, 255, 255;
+  --accent: 251, 191, 36;      
 }
 
 .theme-text {

@@ -18,9 +18,7 @@ declare module 'react-typed' {
         onReset?: () => void;
     }
 
-    // React wrapper for typed.js
     export const ReactTyped: React.FC<TypedProps>;
 
-    // Base typed.js export
     export { TypedJS as Typed };
 }
