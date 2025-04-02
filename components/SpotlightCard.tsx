@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { MouseEvent, ReactNode, useEffect } from 'react';
-import { useTheme } from 'ThemeProvider.tsx';
+import { useTheme } from 'components/ThemeProvider';
 
 type SpotlightCardProps = {
   children: ReactNode;

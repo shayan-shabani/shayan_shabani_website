@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
-import { useTheme } from 'ThemeProvider.tsx';
+import { useTheme } from 'components/ThemeProvider';
 
 type GradientBorderCardProps = {
   children: ReactNode;

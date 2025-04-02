@@ -4,7 +4,7 @@ import { ReactTyped } from 'react-typed';
 import { SectionTitle } from 'components/SectionTitle';
 import { LinkToSection } from 'components/Index/LinkToSection';
 import { ProjectsList } from 'components/Index/ProjectsList';
-import ThemeToggle from 'ThemeToggle.tsx';
+import ThemeToggle from 'components/ThemeToggle';
 import {
 	containerClasses,
 	linkClasses,
@@ -19,7 +19,7 @@ export default function Home() {
 					<div className={`${containerClasses} z-10`}>
 						<div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
 						</div>
-						<SectionTitle big accentText="Hi there! I'm">
+						<SectionTitle big accentText="Nice to meet you! I'm">
 							<ReactTyped
 								strings={['Shayan Shabani.']}
 								typeSpeed={50}

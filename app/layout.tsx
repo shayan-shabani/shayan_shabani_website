@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { ThemeProvider } from 'ThemeProvider.tsx';
+import { ThemeProvider } from 'components/ThemeProvider';
 
 export const metadata = {
     title: 'Shayan Shabani',
