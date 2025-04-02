@@ -12,7 +12,7 @@ export default function ThemeToggle() {
         fixed top-4 right-4 w-12 h-12 rounded-full flex items-center justify-center
         shadow-md transition-all duration-300 overflow-visible group
         ${theme === 'light' 
-          ? 'bg-blue-800 hover:shadow-[0_0_15px_rgba(59,130,246,0.7)]' 
+          ? 'bg-blue-800 hover:shadow-[0_0_15px_rgba(59,130,246,0.7)]'
           : 'bg-yellow-300 hover:shadow-[0_0_15px_rgba(252,211,77,0.7)]'
         }
       `}
