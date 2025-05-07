@@ -19,14 +19,6 @@ export const ProjectsList = () => (
 			crabbing for concurrent access, and optimized query execution through hash joins and Top‑N operators.
 		</Card>
 		<Card
-			title="Spark Teen"
-			link="https://www.sparkteen.org/"
-			tags={['Volunteering']}
-		>
-			Built one of the world's largest entrepreneurship education nonprofits. 
-			Backed by We Are Family Foundation, Techstars, the City of Portland, and REAP.
-		</Card>
-		<Card
 			title="TEDx Talk - Creating Inclusive Communities for Refugees"
 			link="https://www.youtube.com/watch?v=hZuc_vgFh-g"
 			tags={['Public Speaking']}
